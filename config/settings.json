@@ -1,0 +1,11 @@
+{
+  "domain": "C-Suite.xyz",
+  "theme": "default",
+  "features": [],
+  "integrations": {
+    "brevo": {
+      "enabled": false,
+      "form_id": ""
+    }
+  }
+}
