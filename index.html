@@ -3,114 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index - C-Suite.xyz</title>
+    <title>C-Suite XYZ</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Brevo Form Styles -->
-    <style>
-        @font-face {
-            font-display: block;
-            font-family: Roboto;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-        }
-
-        @font-face {
-            font-display: fallback;
-            font-family: Roboto;
-            font-weight: 600;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-        }
-
-        @font-face {
-            font-display: fallback;
-            font-family: Roboto;
-            font-weight: 700;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-        }
-
-        #sib-container input:-ms-input-placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container input::placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container textarea::placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container a {
-            text-decoration: underline;
-            color: #2BB2FC;
-        }
-    </style>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <!-- HubSpot Tracking Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/{HUBSPOT_PORTAL_ID}.js"></script>
-    <!-- Brevo Chat Widget -->
-    <script>
-        (function(d, w, c) {
-            w.BrevoConversationsID = '{BREVO_CONVERSATIONS_ID}';
-            w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'BrevoConversations');
-    </script>
+    <meta name="description" content="Executive consulting and leadership development">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/logo.png" alt="C-Suite.xyz Logo">
+                <a href="/">C-Suite XYZ</a>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        
-        <h1>Welcome to C-Suite.xyz</h1>
-        <p></p>
-        <section class="services">
-            <h2>Our Services</h2>
-            <p>Discover our range of professional services designed to meet your needs.</p>
+        <section class="hero">
+            <h1>C-Suite XYZ</h1>
+            <p>Elevating executive performance</p>
         </section>
-        
+
+        <section class="features">
+            <h2>Our Services</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Service 1</h3>
+                    <p>Description of service 1</p>
+                </div>
+                <div class="feature">
+                    <h3>Service 2</h3>
+                    <p>Description of service 2</p>
+                </div>
+                <div class="feature">
+                    <h3>Service 3</h3>
+                    <p>Description of service 3</p>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 C-Suite.xyz. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@c-suite.xyz</p>
+                <p>Phone: (555) 678-9012</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="{{ social_facebook }}" target="_blank">Facebook</a>
+                    <a href="{{ social_twitter }}" target="_blank">Twitter</a>
+                    <a href="{{ social_linkedin }}" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ current_year }} C-Suite XYZ. All rights reserved.</p>
+        </div>
     </footer>
-    <!-- Brevo Form Scripts -->
-    <script>
-        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-        window.LOCALE = 'en';
-        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-        window.translation = {
-            common: {
-                selectedList: '{quantity} list selected',
-                selectedLists: '{quantity} lists selected',
-                selectedOption: '{quantity} selected',
-                selectedOptions: '{quantity} selected',
-            }
-        };
-        var AUTOHIDE = Boolean(0);
-    </script>
-    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html> 
