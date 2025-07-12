@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Layout from '../components/Layout'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -115,7 +116,7 @@ export default function Pricing() {
         <meta name="twitter:image" content="https://c-suite.xyz/og-pricing.jpg" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <Layout>
         <div className="container mx-auto max-w-7xl px-6 py-16">
           {/* Page Title */}
           <h1 className="text-4xl font-bold text-center mb-12 text-slate-900">
@@ -303,7 +304,7 @@ export default function Pricing() {
             </p>
           </div>
         </div>
-      </div>
+      </Layout>
     </>
   )
 }
