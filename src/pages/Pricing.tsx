@@ -57,9 +57,9 @@ const pricingTiers = [
   {
     id: 'pro',
     name: 'Pro',
-    price: 'From $29',
+    price: 'From $25',
     period: 'per user/month',
-    monthlyPrice: 29,
+    monthlyPrice: 25,
     features: [
       { name: 'Premium dashboard', included: true },
       { name: '24/7 priority support', included: true },
@@ -71,11 +71,59 @@ const pricingTiers = [
     stripeProductId: 'price_pro_monthly'
   },
   {
+    id: 'business',
+    name: 'Business',
+    price: 'From $50',
+    period: 'per user/month',
+    monthlyPrice: 50,
+    features: [
+      { name: 'Business dashboard', included: true },
+      { name: 'Dedicated support', included: true },
+      { name: 'Multi-org management', included: true },
+      { name: 'Custom reports & exports', included: true },
+      { name: 'Full API access', included: true },
+      { name: 'Advanced integrations', included: true }
+    ],
+    stripeProductId: 'price_business_monthly'
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    price: 'From $75',
+    period: 'per user/month',
+    monthlyPrice: 75,
+    features: [
+      { name: 'Premium dashboard', included: true },
+      { name: 'Premium support', included: true },
+      { name: 'Advanced automation', included: true },
+      { name: 'Real-time analytics', included: true },
+      { name: 'Custom workflows', included: true },
+      { name: 'Enterprise integrations', included: true }
+    ],
+    stripeProductId: 'price_premium_monthly'
+  },
+  {
+    id: 'executive',
+    name: 'Executive',
+    price: 'From $100',
+    period: 'per user/month',
+    monthlyPrice: 100,
+    features: [
+      { name: 'Executive dashboard', included: true },
+      { name: 'Executive support team', included: true },
+      { name: 'Strategic insights', included: true },
+      { name: 'Executive reporting', included: true },
+      { name: 'Leadership analytics', included: true },
+      { name: 'C-suite integrations', included: true }
+    ],
+    stripeProductId: 'price_executive_monthly'
+  },
+  {
     id: 'enterprise',
     name: 'Enterprise',
-    price: 'Custom',
-    period: 'contact us',
-    monthlyPrice: null,
+    price: 'From $250',
+    period: 'per user/month',
+    monthlyPrice: 250,
     features: [
       { name: 'Enterprise dashboard', included: true },
       { name: 'Dedicated account manager', included: true },
@@ -84,13 +132,13 @@ const pricingTiers = [
       { name: 'Full API access', included: true },
       { name: 'Custom integrations', included: true }
     ],
-    stripeProductId: 'price_enterprise_custom'
+    stripeProductId: 'price_enterprise_monthly'
   }
 ]
 
-// Calculate lifetime pricing (36 months × 12 × 0.80 for 20% discount)
+// Calculate lifetime pricing (32X monthly cost)
 const calculateLifetimePrice = (monthlyPrice: number) => {
-  return Math.round(monthlyPrice * 12 * 0.80 * 36 * 100) / 100
+  return monthlyPrice * 32
 }
 
 export default function Pricing() {
@@ -124,8 +172,7 @@ export default function Pricing() {
           </h1>
 
           {/* Pricing Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
-            {pricingTiers.map((tier) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-6 max-w-7xl mx-auto">{pricingTiers.map((tier) => (
               <Card 
                 key={tier.id}
                 className={`relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
@@ -183,13 +230,6 @@ export default function Pricing() {
                     >
                       Get Started Free
                     </Button>
-                  ) : tier.id === 'enterprise' ? (
-                    <Button 
-                      className="w-full bg-slate-900 hover:bg-slate-800 text-white"
-                      size="sm"
-                    >
-                      Contact Us
-                    </Button>
                   ) : (
                     <>
                       <Button 
@@ -221,7 +261,7 @@ export default function Pricing() {
               Lifetime Access
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-6 max-w-7xl mx-auto">
               {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
                 const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
                 
@@ -234,7 +274,7 @@ export default function Pricing() {
                     {/* Save Badge */}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-green-500 text-white px-3 py-1 text-xs font-medium">
-                        Save 20% yearly
+                        32X Monthly
                       </Badge>
                     </div>
 
@@ -247,7 +287,7 @@ export default function Pricing() {
                         {lifetimePrice ? (
                           <>
                             <div className="text-2xl font-bold text-slate-900">
-                              ${lifetimePrice}
+                              ${lifetimePrice.toLocaleString()}
                             </div>
                             <div className="text-sm text-slate-600 mt-1">
                               One-time payment
@@ -270,8 +310,8 @@ export default function Pricing() {
                       <div className="text-center">
                         {lifetimePrice && (
                           <div className="text-sm text-green-600 font-medium mb-4">
-                            Save ${Math.round((tier.monthlyPrice! * 12 * 36) - lifetimePrice)} 
-                            <br />vs. monthly billing
+                            Save ${Math.round((tier.monthlyPrice! * 12 * 3) - lifetimePrice)} 
+                            <br />vs. 3 years monthly
                           </div>
                         )}
                         <p className="text-sm text-slate-600">
@@ -285,7 +325,7 @@ export default function Pricing() {
                         className="w-full bg-green-600 hover:bg-green-700 text-white"
                         size="sm"
                       >
-                        {tier.id === 'enterprise' ? 'Contact for Lifetime Quote' : 'Get Lifetime Access'}
+                        Get Lifetime Access
                       </Button>
                     </CardFooter>
                   </Card>
