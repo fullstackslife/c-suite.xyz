@@ -5,70 +5,113 @@ import { Button } from '@/components/ui/button'
 
 const pricingTiers = [
   {
-    id: 'basic',
-    name: 'Basic',
-    price: '$9',
-    period: '/mo',
-    description: 'Perfect for small teams getting started',
+    id: 'free',
+    name: 'Free',
+    price: '$0',
+    period: 'per user/month',
+    monthlyPrice: 0,
     features: [
-      { name: 'Dashboard access', included: true },
-      { name: '1 bot included', included: true },
+      { name: 'Basic dashboard access', included: true },
       { name: 'Community support', included: true },
-      { name: 'Advanced analytics', included: false }
+      { name: 'Up to 2 team members', included: true },
+      { name: 'Advanced analytics', included: false },
+      { name: 'Priority support', included: false },
+      { name: 'Custom integrations', included: false }
     ],
-    stripeProductId: 'price_basic_monthly'
+    stripeProductId: 'price_free'
+  },
+  {
+    id: 'essential',
+    name: 'Essential',
+    price: 'From $5',
+    period: 'per user/month',
+    monthlyPrice: 5,
+    features: [
+      { name: 'Full dashboard access', included: true },
+      { name: 'Email support', included: true },
+      { name: 'Up to 10 team members', included: true },
+      { name: 'Basic analytics', included: true },
+      { name: 'Priority support', included: false },
+      { name: 'Custom integrations', included: false }
+    ],
+    stripeProductId: 'price_essential_monthly'
+  },
+  {
+    id: 'team',
+    name: 'Team',
+    price: 'From $15',
+    period: 'per user/month',
+    monthlyPrice: 15,
+    popular: true,
+    features: [
+      { name: 'Advanced dashboard', included: true },
+      { name: 'Priority email support', included: true },
+      { name: 'Unlimited team members', included: true },
+      { name: 'Advanced analytics', included: true },
+      { name: 'Team collaboration tools', included: true },
+      { name: 'Custom integrations', included: false }
+    ],
+    stripeProductId: 'price_team_monthly'
   },
   {
     id: 'pro',
     name: 'Pro',
-    price: '$29',
-    period: '/mo',
-    description: 'Most popular choice for growing businesses',
+    price: 'From $29',
+    period: 'per user/month',
+    monthlyPrice: 29,
     features: [
-      { name: '5 bots included', included: true },
-      { name: 'Real-time logs', included: true },
-      { name: 'Priority support', included: true },
-      { name: 'Advanced analytics', included: true }
+      { name: 'Premium dashboard', included: true },
+      { name: '24/7 priority support', included: true },
+      { name: 'Unlimited everything', included: true },
+      { name: 'Advanced analytics & reports', included: true },
+      { name: 'API access', included: true },
+      { name: 'Basic integrations', included: true }
     ],
-    popular: true,
     stripeProductId: 'price_pro_monthly'
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
     price: 'Custom',
-    period: '',
-    description: 'Advanced features for large organizations',
+    period: 'contact us',
+    monthlyPrice: null,
     features: [
-      { name: 'Dedicated VPS', included: true },
-      { name: 'White-glove setup', included: true },
-      { name: 'SLA guarantee', included: true },
+      { name: 'Enterprise dashboard', included: true },
+      { name: 'Dedicated account manager', included: true },
+      { name: 'White-glove onboarding', included: true },
+      { name: 'Custom analytics & reports', included: true },
+      { name: 'Full API access', included: true },
       { name: 'Custom integrations', included: true }
     ],
     stripeProductId: 'price_enterprise_custom'
   }
 ]
 
+// Calculate lifetime pricing (36 months × 12 × 0.80 for 20% discount)
+const calculateLifetimePrice = (monthlyPrice: number) => {
+  return Math.round(monthlyPrice * 12 * 0.80 * 36 * 100) / 100
+}
+
 export default function Pricing() {
   return (
     <>
       <Head>
-        <title>Pricing - C-Suite.xyz</title>
+        <title>Pricing | C‑Suite</title>
         <meta 
           name="description" 
-          content="Flexible pricing plans for executive leaders. Choose from Basic, Pro, or Enterprise tiers designed for your business needs." 
+          content="Choose the perfect pricing plan for your executive team. From Free to Enterprise, find the right solution for your C-suite needs." 
         />
         <meta name="keywords" content="pricing, executive, leadership, business plans, C-suite" />
         
         {/* OpenGraph tags */}
-        <meta property="og:title" content="Pricing - C-Suite.xyz" />
-        <meta property="og:description" content="Flexible pricing plans for executive leaders. Choose from Basic, Pro, or Enterprise tiers designed for your business needs." />
+        <meta property="og:title" content="Pricing | C‑Suite" />
+        <meta property="og:description" content="Choose the perfect pricing plan for your executive team. From Free to Enterprise, find the right solution for your C-suite needs." />
         <meta property="og:url" content="https://c-suite.xyz/pricing" />
         <meta property="og:image" content="https://c-suite.xyz/og-pricing.jpg" />
         
         {/* Twitter Card tags */}
-        <meta name="twitter:title" content="Pricing - C-Suite.xyz" />
-        <meta name="twitter:description" content="Flexible pricing plans for executive leaders. Choose from Basic, Pro, or Enterprise tiers designed for your business needs." />
+        <meta name="twitter:title" content="Pricing | C‑Suite" />
+        <meta name="twitter:description" content="Choose the perfect pricing plan for your executive team. From Free to Enterprise, find the right solution for your C-suite needs." />
         <meta name="twitter:image" content="https://c-suite.xyz/og-pricing.jpg" />
       </Head>
 
@@ -80,13 +123,13 @@ export default function Pricing() {
           </h1>
 
           {/* Pricing Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
             {pricingTiers.map((tier) => (
               <Card 
                 key={tier.id}
-                className={`relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
-                  tier.popular ? 'border-2 border-blue-500 shadow-lg' : 'border border-gray-200'
-                }`}
+                className={`relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
+                  tier.popular ? 'border-2 border-blue-500 shadow-lg' : 'border-gray-200'
+                } bg-white`}
                 data-plan-id={tier.stripeProductId}
               >
                 {/* Most Popular Badge */}
@@ -99,35 +142,31 @@ export default function Pricing() {
                 )}
 
                 <CardHeader className="text-center pb-4">
-                  {/* Plan Name Badge */}
-                  <Badge variant="outline" className="w-fit mx-auto mb-4">
+                  {/* Plan Name */}
+                  <CardTitle className="text-xl font-bold text-slate-900 mb-4">
                     {tier.name}
-                  </Badge>
+                  </CardTitle>
                   
                   {/* Price Display */}
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-slate-900">
+                  <div className="mb-2">
+                    <div className="text-3xl font-bold text-slate-900">
                       {tier.price}
-                    </span>
-                    <span className="text-lg text-slate-600 ml-1">
+                    </div>
+                    <div className="text-sm text-slate-600 mt-1">
                       {tier.period}
-                    </span>
+                    </div>
                   </div>
-                  
-                  <CardDescription className="text-base">
-                    {tier.description}
-                  </CardDescription>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className="px-6">
                   {/* Features List */}
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 text-left">
                     {tier.features.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="mr-3 text-lg">
+                      <li key={index} className="flex items-start">
+                        <span className="mr-3 text-lg mt-0.5">
                           {feature.included ? '✅' : '❌'}
                         </span>
-                        <span className={feature.included ? 'text-slate-700' : 'text-slate-400'}>
+                        <span className={`text-sm ${feature.included ? 'text-slate-700' : 'text-slate-400'}`}>
                           {feature.name}
                         </span>
                       </li>
@@ -135,20 +174,123 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
 
-                <CardFooter className="pt-6">
-                  <Button 
-                    className={`w-full transition-all duration-200 ${
-                      tier.popular 
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                        : 'bg-slate-900 hover:bg-slate-800 text-white'
-                    }`}
-                    size="lg"
-                  >
-                    Get Started
-                  </Button>
+                <CardFooter className="pt-6 px-6 pb-6 flex flex-col gap-3">
+                  {tier.id === 'free' ? (
+                    <Button 
+                      className="w-full bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300"
+                      size="sm"
+                    >
+                      Get Started Free
+                    </Button>
+                  ) : tier.id === 'enterprise' ? (
+                    <Button 
+                      className="w-full bg-slate-900 hover:bg-slate-800 text-white"
+                      size="sm"
+                    >
+                      Contact Us
+                    </Button>
+                  ) : (
+                    <>
+                      <Button 
+                        className="w-full bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200"
+                        size="sm"
+                      >
+                        Free Trial
+                      </Button>
+                      <Button 
+                        className={`w-full transition-all duration-200 ${
+                          tier.popular 
+                            ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                            : 'bg-slate-900 hover:bg-slate-800 text-white'
+                        }`}
+                        size="sm"
+                      >
+                        Buy Now
+                      </Button>
+                    </>
+                  )}
                 </CardFooter>
               </Card>
             ))}
+          </div>
+
+          {/* Lifetime Access Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
+              Lifetime Access
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
+                const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
+                
+                return (
+                  <Card 
+                    key={`lifetime-${tier.id}`}
+                    className="relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-200 bg-white"
+                    data-plan-id={`${tier.stripeProductId}_lifetime`}
+                  >
+                    {/* Save Badge */}
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-green-500 text-white px-3 py-1 text-xs font-medium">
+                        Save 20% yearly
+                      </Badge>
+                    </div>
+
+                    <CardHeader className="text-center pb-4 pt-6">
+                      <CardTitle className="text-lg font-bold text-slate-900 mb-4">
+                        {tier.name}
+                      </CardTitle>
+                      
+                      <div className="mb-2">
+                        {lifetimePrice ? (
+                          <>
+                            <div className="text-2xl font-bold text-slate-900">
+                              ${lifetimePrice}
+                            </div>
+                            <div className="text-sm text-slate-600 mt-1">
+                              One-time payment
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="text-lg font-bold text-slate-900">
+                              Custom Quote
+                            </div>
+                            <div className="text-sm text-slate-600 mt-1">
+                              Contact us for pricing
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </CardHeader>
+
+                    <CardContent className="px-6">
+                      <div className="text-center">
+                        {lifetimePrice && (
+                          <div className="text-sm text-green-600 font-medium mb-4">
+                            Save ${Math.round((tier.monthlyPrice! * 12 * 36) - lifetimePrice)} 
+                            <br />vs. monthly billing
+                          </div>
+                        )}
+                        <p className="text-sm text-slate-600">
+                          All {tier.name} features included forever
+                        </p>
+                      </div>
+                    </CardContent>
+
+                    <CardFooter className="pt-4 px-6 pb-6">
+                      <Button 
+                        className="w-full bg-green-600 hover:bg-green-700 text-white"
+                        size="sm"
+                      >
+                        {tier.id === 'enterprise' ? 'Contact for Lifetime Quote' : 'Get Lifetime Access'}
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                )
+              })}
+            </div>
           </div>
 
           {/* Additional Information */}
