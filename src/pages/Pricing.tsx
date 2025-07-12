@@ -171,15 +171,17 @@ export default function Pricing() {
             Pricing
           </h1>
 
-          {/* Pricing Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">{pricingTiers.map((tier) => (
-              <Card 
-                key={tier.id}
-                className={`relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
-                  tier.popular ? 'border-2 border-blue-500 shadow-lg' : 'border-gray-200'
-                } bg-white`}
-                data-plan-id={tier.stripeProductId}
-              >
+          {/* Pricing Slider */}
+          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
+            <div className="flex gap-6 px-4 whitespace-nowrap">
+              {pricingTiers.map((tier) => (
+                <Card 
+                  key={tier.id}
+                  className={`w-[300px] shrink-0 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
+                    tier.popular ? 'border-2 border-blue-500 shadow-lg' : 'border-gray-200'
+                  } bg-white`}
+                  data-plan-id={tier.stripeProductId}
+                >
                 {/* Most Popular Badge */}
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -254,6 +256,7 @@ export default function Pricing() {
               </Card>
             ))}
           </div>
+        </div>
 
           {/* Lifetime Access Section */}
           <div className="mt-20">
@@ -261,16 +264,17 @@ export default function Pricing() {
               Lifetime Access
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
-                const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
-                
-                return (
-                  <Card 
-                    key={`lifetime-${tier.id}`}
-                    className="relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-200 bg-white"
-                    data-plan-id={`${tier.stripeProductId}_lifetime`}
-                  >
+            <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
+              <div className="flex gap-6 px-4 whitespace-nowrap">
+                {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
+                  const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
+                  
+                  return (
+                    <Card 
+                      key={`lifetime-${tier.id}`}
+                      className="w-[300px] shrink-0 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-200 bg-white"
+                      data-plan-id={`${tier.stripeProductId}_lifetime`}
+                    >
                     {/* Save Badge */}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-green-500 text-white px-3 py-1 text-xs font-medium">
@@ -332,6 +336,7 @@ export default function Pricing() {
                 )
               })}
             </div>
+          </div>
           </div>
 
           {/* Additional Information */}
