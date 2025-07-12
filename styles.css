@@ -118,6 +118,44 @@ main {
     line-height: 1.7;
 }
 
+/* Tier Explanation Layout */
+.tier-explanation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tier-category {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #2a5298;
+}
+
+.tier-category h3 {
+    color: #1e3c72;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.tier-category p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tier-category strong {
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .tier-explanation {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Features Grid */
 .features {
     display: grid;
