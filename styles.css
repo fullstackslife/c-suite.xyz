@@ -238,3 +238,225 @@ footer {
     color: #ff6b35;
     font-weight: 600;
 }
+
+/* Pricing Styles */
+.user-type-selector {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.user-type-selector h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.user-type-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.user-type-btn {
+    background: white;
+    border: 2px solid #1e3c72;
+    color: #1e3c72;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.user-type-btn:hover {
+    background: #1e3c72;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.user-type-btn.active {
+    background: #1e3c72;
+    color: white;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.3);
+}
+
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured {
+    border-color: #28a745;
+    box-shadow: 0 8px 32px rgba(40, 167, 69, 0.2);
+}
+
+.pricing-card.highlighted {
+    border-color: #ffc107;
+    box-shadow: 0 8px 32px rgba(255, 193, 7, 0.3);
+    transform: scale(1.02);
+}
+
+.pricing-card.dimmed {
+    opacity: 0.7;
+}
+
+.badge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 12px 0 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-header h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.currency {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.period {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.features-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.pricing-cta {
+    display: block;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.pricing-cta:hover {
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3);
+}
+
+.featured-cta {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.featured-cta:hover {
+    background: linear-gradient(135deg, #20c997, #28a745);
+}
+
+.entry-level .card-header {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+.entry-level .pricing-cta {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+.entry-level .pricing-cta:hover {
+    background: linear-gradient(135deg, #138496, #17a2b8);
+}
+
+/* Responsive pricing adjustments */
+@media (max-width: 768px) {
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .user-type-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .user-type-btn {
+        width: 200px;
+    }
+    
+    .price .amount {
+        font-size: 2.5rem;
+    }
+}
