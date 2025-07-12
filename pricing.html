@@ -47,431 +47,223 @@
             </div>
         </section>
 
-        <!-- Pricing Tiers -->
-        <div class="pricing-tiers">
-            <!-- Row 1: Free & Beta Tiers + Strategic Essentials -->
+        <!-- Billing Period Selector -->
+        <section class="section">
+            <div class="billing-selector">
+                <h3>Choose Your Billing Period:</h3>
+                <div class="billing-toggle">
+                    <button class="billing-btn active" data-period="monthly">Monthly</button>
+                    <button class="billing-btn" data-period="annual">Annual <span class="discount">Save 20%</span></button>
+                    <button class="billing-btn" data-period="lifetime">Lifetime <span class="discount">Best Value</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free & Special Tiers -->
+        <div class="free-tiers">
+            <div class="section-header">
+                <h2>Free & Special Access</h2>
+                <p>Start your executive journey with our free offerings or join our exclusive contributor community</p>
+            </div>
             
-            <!-- Free Explorer -->
-            <div class="pricing-card free-tier">
-                <div class="card-header">
-                    <h3>🆓 Free Explorer</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">0</span>
-                        <span class="period">forever</span>
+            <div class="free-tier-grid">
+                <!-- Free Explorer -->
+                <div class="pricing-card free-tier">
+                    <div class="card-header">
+                        <h3>🆓 Free Explorer</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">forever</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Get a taste of the ecosystem with essential executive insights.</p>
+                        <ul class="features-list">
+                            <li>✓ Weekly insights</li>
+                            <li>✓ Community forum access</li>
+                            <li>✓ Limited AI consults</li>
+                            <li>✓ Basic resource access</li>
+                            <li>✓ Upgrade invitations</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Get Started Free</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-description">Get a taste of the ecosystem with essential executive insights.</p>
-                    <ul class="features-list">
-                        <li>✓ Weekly insights</li>
-                        <li>✓ Community forum access</li>
-                        <li>✓ Limited AI consults</li>
-                        <li>✓ Basic resource access</li>
-                        <li>✓ Upgrade invitations</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Started Free</a>
+
+                <!-- Beta Tester -->
+                <div class="pricing-card beta-tier">
+                    <div class="card-header">
+                        <h3>🧪 Beta Tester</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount beta-price">0</span>
+                            <span class="period">invite-only</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Early access in exchange for feedback.</p>
+                        <ul class="features-list">
+                            <li>✓ Full access to beta features</li>
+                            <li>✓ Join product feedback calls</li>
+                            <li>✓ Upgrade path discounts</li>
+                            <li>✓ Product roadmap input</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Apply for Beta</a>
+                    </div>
+                </div>
+
+                <!-- Contributor -->
+                <div class="pricing-card contributor-tier featured">
+                    <div class="badge">💡 LIFETIME</div>
+                    <div class="card-header">
+                        <h3>Contributor</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount contributor-price">1,497</span>
+                            <span class="period">one-time</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Thought leadership and platform co-creation.</p>
+                        <ul class="features-list">
+                            <li>✓ Lifetime platform access</li>
+                            <li>✓ Publishing and co-branding</li>
+                            <li>✓ Speaker/roundtable invites</li>
+                            <li>✓ Innovation Lab access</li>
+                            <li>✓ Revenue sharing opt-in</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta featured-cta">Become Contributor</a>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Beta Tester -->
-            <div class="pricing-card beta-tier">
-                <div class="card-header">
-                    <h3>🧪 Beta Tester</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount beta-price">0</span>
-                        <span class="period">invite-only</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Early access in exchange for feedback.</p>
-                    <ul class="features-list">
-                        <li>✓ Full access to beta features</li>
-                        <li>✓ Join product feedback calls</li>
-                        <li>✓ Upgrade path discounts</li>
-                        <li>✓ Product roadmap input</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Apply for Beta</a>
-                </div>
+        <!-- Main Subscription Tiers -->
+        <div class="subscription-tiers">
+            <div class="section-header">
+                <h2>Executive Subscription Tiers</h2>
+                <p>Choose the perfect plan for your executive leadership journey with flexible billing options</p>
             </div>
-
-            <!-- Strategic Essentials Monthly -->
-            <div class="pricing-card strategic-tier">
-                <div class="card-header">
-                    <h3>+ Strategic Essentials</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount strategic-price">10</span>
-                        <span class="period">per month</span>
+            
+                <!-- Strategic Essentials -->
+                <div class="pricing-card strategic-tier">
+                    <div class="card-header">
+                        <h3>+ Strategic Essentials</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount strategic-price">10</span>
+                            <span class="period period-text">per month</span>
+                        </div>
+                        <div class="savings-info"></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Casual execs needing briefings + tools.</p>
+                        <ul class="features-list">
+                            <li>✓ Monthly strategy drops</li>
+                            <li>✓ Executive briefings</li>
+                            <li>✓ Basic AI consultations</li>
+                            <li>✓ Leadership tools access</li>
+                            <li>✓ Community networking</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Subscribe Now</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-description">Casual execs needing briefings + tools.</p>
-                    <ul class="features-list">
-                        <li>✓ Monthly strategy drops</li>
-                        <li>✓ Executive briefings</li>
-                        <li>✓ Basic AI consultations</li>
-                        <li>✓ Leadership tools access</li>
-                        <li>✓ Community networking</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Monthly</a>
-                </div>
-            </div>
 
-            <!-- Strategic Essentials Annual -->
-            <div class="pricing-card strategic-tier">
-                <div class="period-badge annual">Save 20%</div>
-                <div class="card-header">
-                    <h3>+ Strategic Essentials</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount strategic-annual-price">96</span>
-                        <span class="period">per year</span>
-                        <span class="savings">$24 savings vs monthly</span>
+                <!-- Core Executive -->
+                <div class="pricing-card core-tier">
+                    <div class="card-header">
+                        <h3>++ Core Executive</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount core-price">25</span>
+                            <span class="period period-text">per month</span>
+                        </div>
+                        <div class="savings-info"></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Mid-career leaders building momentum.</p>
+                        <ul class="features-list">
+                            <li>✓ All Strategic Essentials</li>
+                            <li>✓ Monthly live sessions</li>
+                            <li>✓ Priority AI consultations</li>
+                            <li>✓ Industry trend analysis</li>
+                            <li>✓ Executive networking events</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Subscribe Now</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-description">Same features, annual savings.</p>
-                    <ul class="features-list">
-                        <li>✓ All monthly features</li>
-                        <li>✓ 20% annual discount</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ Annual strategy session</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Annually</a>
-                </div>
-            </div>
 
-            <!-- Strategic Essentials Lifetime -->
-            <div class="pricing-card strategic-tier">
-                <div class="period-badge lifetime">Lifetime</div>
-                <div class="card-header">
-                    <h3>+ Strategic Essentials</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount strategic-lifetime-price">240</span>
-                        <span class="period">one-time</span>
-                        <span class="savings">2 years worth + lifetime access</span>
+                <!-- Executive Plus -->
+                <div class="pricing-card plus-tier popular">
+                    <div class="badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>+++ Executive Plus</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount plus-price">50</span>
+                            <span class="period period-text">per month</span>
+                        </div>
+                        <div class="savings-info"></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Growth-focused innovators needing leverage.</p>
+                        <ul class="features-list">
+                            <li>✓ All Core Executive</li>
+                            <li>✓ Personal strategy advisor</li>
+                            <li>✓ Innovation workshops</li>
+                            <li>✓ Advanced networking</li>
+                            <li>✓ Early access to tools</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Subscribe Now</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-description">Lifetime strategic insights access.</p>
-                    <ul class="features-list">
-                        <li>✓ All strategic features</li>
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Future feature upgrades</li>
-                        <li>✓ VIP community status</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Lifetime Access</a>
-                </div>
-            </div>
 
-            <!-- Core Executive Monthly -->
-            <div class="pricing-card core-tier">
-                <div class="card-header">
-                    <h3>++ Core Executive</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount core-price">25</span>
-                        <span class="period">per month</span>
+                <!-- Visionary Leader -->
+                <div class="pricing-card visionary-tier">
+                    <div class="card-header">
+                        <h3>++++ Visionary Leader</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount visionary-price">100</span>
+                            <span class="period period-text">per month</span>
+                        </div>
+                        <div class="savings-info"></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Founders, CxOs, major org leaders.</p>
+                        <ul class="features-list">
+                            <li>✓ All Executive Plus</li>
+                            <li>✓ VIP networking privileges</li>
+                            <li>✓ Unlimited AI consultations</li>
+                            <li>✓ Innovation lab membership</li>
+                            <li>✓ Thought leadership opps</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Subscribe Now</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-description">Mid-career leaders building momentum.</p>
-                    <ul class="features-list">
-                        <li>✓ All Strategic Essentials</li>
-                        <li>✓ Monthly live sessions</li>
-                        <li>✓ Priority AI consultations</li>
-                        <li>✓ Industry trend analysis</li>
-                        <li>✓ Executive networking events</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Monthly</a>
-                </div>
-            </div>
 
-            <!-- Core Executive Annual -->
-            <div class="pricing-card core-tier">
-                <div class="period-badge annual">Save 20%</div>
-                <div class="card-header">
-                    <h3>++ Core Executive</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount core-annual-price">240</span>
-                        <span class="period">per year</span>
-                        <span class="savings">$60 savings vs monthly</span>
+                <!-- Founder Circle -->
+                <div class="pricing-card founder-tier">
+                    <div class="card-header">
+                        <h3>+++++ Founder Circle</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount founder-price">250</span>
+                            <span class="period period-text">per month</span>
+                        </div>
+                        <div class="savings-info"></div>
                     </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Core features with annual savings.</p>
-                    <ul class="features-list">
-                        <li>✓ All monthly features</li>
-                        <li>✓ 20% annual discount</li>
-                        <li>✓ Quarterly strategy sessions</li>
-                        <li>✓ Premium networking access</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Annually</a>
-                </div>
-            </div>
-
-            <!-- Core Executive Lifetime -->
-            <div class="pricing-card core-tier">
-                <div class="period-badge lifetime">Lifetime</div>
-                <div class="card-header">
-                    <h3>++ Core Executive</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount core-lifetime-price">600</span>
-                        <span class="period">one-time</span>
-                        <span class="savings">2 years worth + lifetime access</span>
+                    <div class="card-body">
+                        <p class="card-description">Power users shaping the future.</p>
+                        <ul class="features-list">
+                            <li>✓ All Visionary Leader</li>
+                            <li>✓ Founder community access</li>
+                            <li>✓ Private consulting sessions</li>
+                            <li>✓ Custom partnerships</li>
+                            <li>✓ Platform co-creation</li>
+                        </ul>
+                        <a href="contact.html" class="pricing-cta">Subscribe Now</a>
                     </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Lifetime core executive access.</p>
-                    <ul class="features-list">
-                        <li>✓ All core features</li>
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Future feature upgrades</li>
-                        <li>✓ Executive alumni network</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Lifetime Access</a>
-                </div>
-            </div>
-
-            <!-- Executive Plus Monthly -->
-            <div class="pricing-card plus-tier">
-                <div class="card-header">
-                    <h3>+++ Executive Plus</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount plus-price">50</span>
-                        <span class="period">per month</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Growth-focused innovators needing leverage.</p>
-                    <ul class="features-list">
-                        <li>✓ All Core Executive</li>
-                        <li>✓ Personal strategy advisor</li>
-                        <li>✓ Innovation workshops</li>
-                        <li>✓ Advanced networking</li>
-                        <li>✓ Early access to tools</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Monthly</a>
-                </div>
-            </div>
-
-            <!-- Executive Plus Annual -->
-            <div class="pricing-card plus-tier">
-                <div class="period-badge annual">Save 20%</div>
-                <div class="card-header">
-                    <h3>+++ Executive Plus</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount plus-annual-price">480</span>
-                        <span class="period">per year</span>
-                        <span class="savings">$120 savings vs monthly</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Plus features with annual savings.</p>
-                    <ul class="features-list">
-                        <li>✓ All monthly features</li>
-                        <li>✓ 20% annual discount</li>
-                        <li>✓ Exclusive annual events</li>
-                        <li>✓ Innovation lab access</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Annually</a>
-                </div>
-            </div>
-
-            <!-- Executive Plus Lifetime -->
-            <div class="pricing-card plus-tier">
-                <div class="period-badge lifetime">Lifetime</div>
-                <div class="card-header">
-                    <h3>+++ Executive Plus</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount plus-lifetime-price">1,200</span>
-                        <span class="period">one-time</span>
-                        <span class="savings">2 years worth + lifetime access</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Lifetime executive plus access.</p>
-                    <ul class="features-list">
-                        <li>✓ All plus features</li>
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Future feature upgrades</li>
-                        <li>✓ Innovation partner status</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Lifetime Access</a>
-                </div>
-            </div>
-
-            <!-- Visionary Leader Monthly -->
-            <div class="pricing-card visionary-tier">
-                <div class="card-header">
-                    <h3>++++ Visionary Leader</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount visionary-price">100</span>
-                        <span class="period">per month</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Founders, CxOs, major org leaders.</p>
-                    <ul class="features-list">
-                        <li>✓ All Executive Plus</li>
-                        <li>✓ VIP networking privileges</li>
-                        <li>✓ Unlimited AI consultations</li>
-                        <li>✓ Innovation lab membership</li>
-                        <li>✓ Thought leadership opps</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Monthly</a>
-                </div>
-            </div>
-
-            <!-- Visionary Leader Annual -->
-            <div class="pricing-card visionary-tier">
-                <div class="period-badge annual">Save 20%</div>
-                <div class="card-header">
-                    <h3>++++ Visionary Leader</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount visionary-annual-price">960</span>
-                        <span class="period">per year</span>
-                        <span class="savings">$240 savings vs monthly</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Visionary features with annual savings.</p>
-                    <ul class="features-list">
-                        <li>✓ All monthly features</li>
-                        <li>✓ 20% annual discount</li>
-                        <li>✓ Annual visionary summit</li>
-                        <li>✓ Speaker bureau access</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Annually</a>
-                </div>
-            </div>
-
-            <!-- Visionary Leader Lifetime -->
-            <div class="pricing-card visionary-tier">
-                <div class="period-badge lifetime">Lifetime</div>
-                <div class="card-header">
-                    <h3>++++ Visionary Leader</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount visionary-lifetime-price">2,400</span>
-                        <span class="period">one-time</span>
-                        <span class="savings">2 years worth + lifetime access</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Lifetime visionary leader access.</p>
-                    <ul class="features-list">
-                        <li>✓ All visionary features</li>
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Future feature upgrades</li>
-                        <li>✓ Advisory board eligibility</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Lifetime Access</a>
-                </div>
-            </div>
-
-            <!-- Founder Circle Monthly -->
-            <div class="pricing-card founder-tier">
-                <div class="card-header">
-                    <h3>+++++ Founder Circle</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount founder-price">250</span>
-                        <span class="period">per month</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Power users shaping the future.</p>
-                    <ul class="features-list">
-                        <li>✓ All Visionary Leader</li>
-                        <li>✓ Founder community access</li>
-                        <li>✓ Private consulting sessions</li>
-                        <li>✓ Custom partnerships</li>
-                        <li>✓ Platform co-creation</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Monthly</a>
-                </div>
-            </div>
-
-            <!-- Founder Circle Annual -->
-            <div class="pricing-card founder-tier">
-                <div class="period-badge annual">Save 20%</div>
-                <div class="card-header">
-                    <h3>+++++ Founder Circle</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount founder-annual-price">2,400</span>
-                        <span class="period">per year</span>
-                        <span class="savings">$600 savings vs monthly</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Founder features with annual savings.</p>
-                    <ul class="features-list">
-                        <li>✓ All monthly features</li>
-                        <li>✓ 20% annual discount</li>
-                        <li>✓ Annual founder retreat</li>
-                        <li>✓ Revenue sharing opt-in</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Subscribe Annually</a>
-                </div>
-            </div>
-
-            <!-- Founder Circle Lifetime -->
-            <div class="pricing-card founder-tier">
-                <div class="period-badge lifetime">Lifetime</div>
-                <div class="card-header">
-                    <h3>+++++ Founder Circle</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount founder-lifetime-price">6,000</span>
-                        <span class="period">one-time</span>
-                        <span class="savings">2 years worth + lifetime access</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Lifetime founder circle access.</p>
-                    <ul class="features-list">
-                        <li>✓ All founder features</li>
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Future feature upgrades</li>
-                        <li>✓ Co-founder status eligibility</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta">Get Lifetime Access</a>
-                </div>
-            </div>
-
-            <!-- Contributor (Existing Lifetime Tier) -->
-            <div class="pricing-card contributor-tier featured">
-                <div class="badge">💡 LIFETIME</div>
-                <div class="card-header">
-                    <h3>Contributor</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount contributor-price">1,497</span>
-                        <span class="period">one-time</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-description">Thought leadership and platform co-creation.</p>
-                    <ul class="features-list">
-                        <li>✓ Lifetime platform access</li>
-                        <li>✓ Publishing and co-branding</li>
-                        <li>✓ Speaker/roundtable invites</li>
-                        <li>✓ Innovation Lab access</li>
-                        <li>✓ Revenue sharing opt-in</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-cta featured-cta">Become Contributor</a>
                 </div>
             </div>
         </div>
@@ -488,140 +280,149 @@
     </footer>
 
     <script>
-        // Dynamic pricing based on user type
+        // Dynamic pricing based on user type and billing period
         const userTypeButtons = document.querySelectorAll('.user-type-btn');
+        const billingButtons = document.querySelectorAll('.billing-btn');
         const pricingTiers = document.querySelector('.pricing-tiers');
 
-        // Pricing adjustments for different user types
-        const pricingAdjustments = {
-            'subscriber': {
-                'strategic-price': 10,
-                'strategic-annual-price': 96,
-                'strategic-lifetime-price': 240,
-                'core-price': 25,
-                'core-annual-price': 240,
-                'core-lifetime-price': 600,
-                'plus-price': 50,
-                'plus-annual-price': 480,
-                'plus-lifetime-price': '1,200',
-                'visionary-price': 100,
-                'visionary-annual-price': 960,
-                'visionary-lifetime-price': '2,400',
-                'founder-price': 250,
-                'founder-annual-price': '2,400',
-                'founder-lifetime-price': '6,000',
-                'contributor-price': '1,497',
-                'beta-price': 0
-            },
-            'early-adopter': {
-                'strategic-price': 8,
-                'strategic-annual-price': 77,
-                'strategic-lifetime-price': 192,
-                'core-price': 20,
-                'core-annual-price': 192,
-                'core-lifetime-price': 480,
-                'plus-price': 40,
-                'plus-annual-price': 384,
-                'plus-lifetime-price': 960,
-                'visionary-price': 80,
-                'visionary-annual-price': 768,
-                'visionary-lifetime-price': '1,920',
-                'founder-price': 200,
-                'founder-annual-price': '1,920',
-                'founder-lifetime-price': '4,800',
-                'contributor-price': '1,197',
-                'beta-price': 0
-            },
-            'contributor': {
-                'strategic-price': 7,
-                'strategic-annual-price': 67,
-                'strategic-lifetime-price': 168,
-                'core-price': 18,
-                'core-annual-price': 173,
-                'core-lifetime-price': 432,
-                'plus-price': 35,
-                'plus-annual-price': 336,
-                'plus-lifetime-price': 840,
-                'visionary-price': 70,
-                'visionary-annual-price': 672,
-                'visionary-lifetime-price': '1,680',
-                'founder-price': 175,
-                'founder-annual-price': '1,680',
-                'founder-lifetime-price': '4,200',
-                'contributor-price': '1,047',
-                'beta-price': 0
-            },
-            'beta': {
-                'strategic-price': 5,
-                'strategic-annual-price': 48,
-                'strategic-lifetime-price': 120,
-                'core-price': 13,
-                'core-annual-price': 125,
-                'core-lifetime-price': 312,
-                'plus-price': 25,
-                'plus-annual-price': 240,
-                'plus-lifetime-price': 600,
-                'visionary-price': 50,
-                'visionary-annual-price': 480,
-                'visionary-lifetime-price': '1,200',
-                'founder-price': 125,
-                'founder-annual-price': '1,200',
-                'founder-lifetime-price': '3,000',
-                'contributor-price': 747,
-                'beta-price': 0
-            },
-            'free': {
-                'strategic-price': 10,
-                'strategic-annual-price': 96,
-                'strategic-lifetime-price': 240,
-                'core-price': 25,
-                'core-annual-price': 240,
-                'core-lifetime-price': 600,
-                'plus-price': 50,
-                'plus-annual-price': 480,
-                'plus-lifetime-price': '1,200',
-                'visionary-price': 100,
-                'visionary-annual-price': 960,
-                'visionary-lifetime-price': '2,400',
-                'founder-price': 250,
-                'founder-annual-price': '2,400',
-                'founder-lifetime-price': '6,000',
-                'contributor-price': '1,497',
-                'beta-price': 0
-            }
+        let currentUserType = 'subscriber';
+        let currentBillingPeriod = 'monthly';
+
+        // Base pricing for monthly billing
+        const basePricing = {
+            'strategic-price': 10,
+            'core-price': 25,
+            'plus-price': 50,
+            'visionary-price': 100,
+            'founder-price': 250,
+            'contributor-price': 1497,
+            'beta-price': 0
         };
 
-        userTypeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                userTypeButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
+        // Calculate pricing for different billing periods
+        function calculatePrice(basePrice, period) {
+            switch(period) {
+                case 'monthly':
+                    return basePrice;
+                case 'annual':
+                    return Math.round(basePrice * 12 * 0.8); // 20% discount
+                case 'lifetime':
+                    return Math.round(basePrice * 24); // 2 years worth
+                default:
+                    return basePrice;
+            }
+        }
 
-                const userType = this.dataset.type;
-                updatePricing(userType);
-            });
-        });
+        // User type multipliers for discounts
+        const userTypeMultipliers = {
+            'subscriber': 1.0,
+            'early-adopter': 0.8,
+            'contributor': 0.7,
+            'beta': 0.5,
+            'free': 1.0
+        };
 
-        function updatePricing(userType) {
-            const adjustments = pricingAdjustments[userType];
+        // Update pricing display
+        function updatePricing() {
+            const multiplier = userTypeMultipliers[currentUserType];
             
-            // Update pricing displays
-            Object.keys(adjustments).forEach(priceClass => {
+            Object.keys(basePricing).forEach(priceClass => {
                 const priceElement = document.querySelector(`.${priceClass}`);
                 if (priceElement) {
-                    priceElement.textContent = adjustments[priceClass];
+                    let basePrice = basePricing[priceClass];
+                    
+                    // Apply user type discount
+                    if (priceClass !== 'beta-price') {
+                        basePrice = Math.round(basePrice * multiplier);
+                    }
+                    
+                    // Apply billing period calculation
+                    let finalPrice = calculatePrice(basePrice, currentBillingPeriod);
+                    
+                    // Format price display
+                    if (finalPrice >= 1000) {
+                        priceElement.textContent = (finalPrice / 1000).toFixed(1) + 'k';
+                    } else {
+                        priceElement.textContent = finalPrice;
+                    }
                 }
             });
 
-            // Update tier visibility and styling
+            // Update period text and savings info
+            updatePeriodText();
+            updateSavingsInfo();
+        }
+
+        function updatePeriodText() {
+            const periodElements = document.querySelectorAll('.period-text');
+            let periodText = '';
+            
+            switch(currentBillingPeriod) {
+                case 'monthly':
+                    periodText = 'per month';
+                    break;
+                case 'annual':
+                    periodText = 'per year';
+                    break;
+                case 'lifetime':
+                    periodText = 'one-time';
+                    break;
+            }
+            
+            periodElements.forEach(element => {
+                element.textContent = periodText;
+            });
+        }
+
+        function updateSavingsInfo() {
+            const savingsElements = document.querySelectorAll('.savings-info');
+            let savingsText = '';
+            
+            switch(currentBillingPeriod) {
+                case 'annual':
+                    savingsText = '<span class="savings">Save 20% vs monthly</span>';
+                    break;
+                case 'lifetime':
+                    savingsText = '<span class="savings">2 years worth + lifetime access</span>';
+                    break;
+                default:
+                    savingsText = '';
+            }
+            
+            savingsElements.forEach(element => {
+                element.innerHTML = savingsText;
+            });
+        }
+
+        // User type selector event handlers
+        userTypeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                userTypeButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentUserType = this.dataset.type;
+                updatePricing();
+                updateHighlighting();
+            });
+        });
+
+        // Billing period selector event handlers
+        billingButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                billingButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentBillingPeriod = this.dataset.period;
+                updatePricing();
+            });
+        });
+
+        function updateHighlighting() {
             const cards = document.querySelectorAll('.pricing-card');
             cards.forEach(card => {
                 card.classList.remove('highlighted', 'dimmed');
             });
 
             // Highlight relevant tiers based on user type
-            switch(userType) {
+            switch(currentUserType) {
                 case 'early-adopter':
                     document.querySelectorAll('.plus-tier').forEach(card => {
                         card.classList.add('highlighted');
@@ -643,8 +444,9 @@
             }
         }
 
-        // Initialize with default pricing
-        updatePricing('subscriber');
+        // Initialize with default settings
+        updatePricing();
+        updateHighlighting();
     </script>
 </body>
 </html>
