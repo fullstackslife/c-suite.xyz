@@ -1,1 +1,120 @@
-<html><body>Contact form coming soon</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact C-Suite.xyz - Connect with our executive leadership team and join our network of visionary leaders.">
+    <title>Contact - C-Suite.xyz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">C-Suite.xyz</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Connect With Us</h1>
+            <p>Ready to join a network of visionary leaders? Let's start the conversation about your executive leadership journey.</p>
+        </section>
+
+        <section class="section">
+            <h2>Get in Touch</h2>
+            <p>Whether you're interested in our executive coaching services, want to join our leadership network, or have questions about how C-Suite.xyz can support your professional growth, we'd love to hear from you.</p>
+            <p>Our team of executive leadership experts is here to help you navigate the complexities of modern business leadership and unlock your full potential as a visionary leader.</p>
+        </section>
+
+        <div class="contact-form">
+            <h2 style="margin-bottom: 1.5rem; color: #1e3c72; text-align: center;">Start Your Leadership Journey</h2>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Current Title/Position</label>
+                    <input type="text" id="title" name="title" placeholder="e.g., CEO, CTO, Founder">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">What are you most interested in?</label>
+                    <select id="interest" name="interest" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                        <option value="">Please select...</option>
+                        <option value="executive-coaching">Executive Coaching</option>
+                        <option value="ai-advisors">AI Leadership Advisors</option>
+                        <option value="strategic-consulting">Strategic Consulting</option>
+                        <option value="networking">Executive Networking</option>
+                        <option value="workshops">Innovation Workshops</option>
+                        <option value="custom">Custom Solution</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell us about your leadership goals and challenges *</label>
+                    <textarea id="message" name="message" placeholder="Share your current leadership challenges, goals, or specific areas where you'd like support..." required></textarea>
+                </div>
+                
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit" class="cta-button" style="border: none; cursor: pointer; font-size: 1rem;">Submit Inquiry</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>📧 Email</h3>
+                <p>For general inquiries and partnership opportunities</p>
+                <p><strong>hello@c-suite.xyz</strong></p>
+            </div>
+            <div class="feature">
+                <h3>📅 Schedule a Call</h3>
+                <p>Book a 30-minute strategy session with our executive team</p>
+                <p><strong>Available by appointment</strong></p>
+            </div>
+            <div class="feature">
+                <h3>💼 Partnership Inquiries</h3>
+                <p>Interested in strategic partnerships or collaboration?</p>
+                <p><strong>partnerships@c-suite.xyz</strong></p>
+            </div>
+        </div>
+
+        <section class="section text-center">
+            <h2>Join Our Executive Network</h2>
+            <p>Connect with like-minded leaders, access exclusive insights, and be part of a community that's shaping the future of business leadership.</p>
+            <p style="margin-top: 1rem; font-style: italic; color: #666;">We typically respond to inquiries within 24 hours during business days.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 C-Suite.xyz. Empowering executive leaders and innovators worldwide.</p>
+    </footer>
+
+    <script>
+        // Basic form handling (for demonstration)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will get back to you within 24 hours.');
+        });
+    </script>
+</body>
+</html>
