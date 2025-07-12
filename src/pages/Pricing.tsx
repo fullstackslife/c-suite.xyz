@@ -38,8 +38,8 @@ const pricingTiers = [
     stripeProductId: 'price_essential_monthly'
   },
   {
-    id: 'team',
-    name: 'Team',
+    id: 'plus',
+    name: 'Plus',
     price: 'From $15',
     period: 'per user/month',
     monthlyPrice: 15,
@@ -52,7 +52,7 @@ const pricingTiers = [
       { name: 'Team collaboration tools', included: true },
       { name: 'Custom integrations', included: false }
     ],
-    stripeProductId: 'price_team_monthly'
+    stripeProductId: 'price_plus_monthly'
   },
   {
     id: 'pro',
@@ -71,8 +71,8 @@ const pricingTiers = [
     stripeProductId: 'price_pro_monthly'
   },
   {
-    id: 'business',
-    name: 'Business',
+    id: 'team',
+    name: 'Team',
     price: 'From $50',
     period: 'per user/month',
     monthlyPrice: 50,
@@ -84,11 +84,11 @@ const pricingTiers = [
       { name: 'Full API access', included: true },
       { name: 'Advanced integrations', included: true }
     ],
-    stripeProductId: 'price_business_monthly'
+    stripeProductId: 'price_team_monthly'
   },
   {
-    id: 'premium',
-    name: 'Premium',
+    id: 'teampro',
+    name: 'TeamPro',
     price: 'From $75',
     period: 'per user/month',
     monthlyPrice: 75,
@@ -100,11 +100,11 @@ const pricingTiers = [
       { name: 'Custom workflows', included: true },
       { name: 'Enterprise integrations', included: true }
     ],
-    stripeProductId: 'price_premium_monthly'
+    stripeProductId: 'price_teampro_monthly'
   },
   {
-    id: 'executive',
-    name: 'Executive',
+    id: 'business',
+    name: 'Business',
     price: 'From $100',
     period: 'per user/month',
     monthlyPrice: 100,
@@ -116,11 +116,11 @@ const pricingTiers = [
       { name: 'Leadership analytics', included: true },
       { name: 'C-suite integrations', included: true }
     ],
-    stripeProductId: 'price_executive_monthly'
+    stripeProductId: 'price_business_monthly'
   },
   {
-    id: 'enterprise',
-    name: 'Enterprise',
+    id: 'businesspro',
+    name: 'BusinessPro',
     price: 'From $250',
     period: 'per user/month',
     monthlyPrice: 250,
@@ -132,7 +132,7 @@ const pricingTiers = [
       { name: 'Full API access', included: true },
       { name: 'Custom integrations', included: true }
     ],
-    stripeProductId: 'price_enterprise_monthly'
+    stripeProductId: 'price_businesspro_monthly'
   }
 ]
 
