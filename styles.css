@@ -368,6 +368,81 @@ footer {
     margin-top: 0.25rem;
 }
 
+/* Pricing Tier Section */
+.tier-section {
+    margin: 2rem 0;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.tier-section h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.tier-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Pricing Table */
+.pricing-table {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pricing-table th {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pricing-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.pricing-table tr:hover {
+    background: #e3f2fd;
+}
+
+@media (max-width: 768px) {
+    .tier-section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Free and Special Tiers Section */
 .free-tiers {
     margin: 3rem 0;
