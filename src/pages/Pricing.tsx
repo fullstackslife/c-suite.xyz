@@ -172,7 +172,7 @@ export default function Pricing() {
           </h1>
 
           {/* Pricing Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-6 max-w-7xl mx-auto">{pricingTiers.map((tier) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">{pricingTiers.map((tier) => (
               <Card 
                 key={tier.id}
                 className={`relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
@@ -261,7 +261,7 @@ export default function Pricing() {
               Lifetime Access
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-6 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
                 const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
                 
