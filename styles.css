@@ -439,6 +439,71 @@ footer {
     background: linear-gradient(135deg, #138496, #17a2b8);
 }
 
+/* Strategic Tier (+ tier) */
+.strategic-tier .card-header {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.strategic-tier .pricing-cta {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.strategic-tier .pricing-cta:hover {
+    background: linear-gradient(135deg, #20c997, #28a745);
+}
+
+/* Core Executive Tier (++ tier) */
+.core-tier .card-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.core-tier .pricing-cta {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.core-tier .pricing-cta:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+}
+
+/* Executive Plus Tier (+++ tier) */
+.plus-tier .card-header {
+    background: linear-gradient(135deg, #6f42c1, #5a2d91);
+}
+
+.plus-tier .pricing-cta {
+    background: linear-gradient(135deg, #6f42c1, #5a2d91);
+}
+
+.plus-tier .pricing-cta:hover {
+    background: linear-gradient(135deg, #5a2d91, #6f42c1);
+}
+
+/* Visionary Leader Tier (++++ tier) */
+.visionary-tier .card-header {
+    background: linear-gradient(135deg, #fd7e14, #e8590c);
+}
+
+.visionary-tier .pricing-cta {
+    background: linear-gradient(135deg, #fd7e14, #e8590c);
+}
+
+.visionary-tier .pricing-cta:hover {
+    background: linear-gradient(135deg, #e8590c, #fd7e14);
+}
+
+/* Founder Circle Tier (+++++ tier) */
+.founder-tier .card-header {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.founder-tier .pricing-cta {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.founder-tier .pricing-cta:hover {
+    background: linear-gradient(135deg, #c82333, #dc3545);
+}
+
 /* Responsive pricing adjustments */
 @media (max-width: 768px) {
     .pricing-tiers {
