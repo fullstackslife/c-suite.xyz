@@ -285,12 +285,39 @@ footer {
 
 .pricing-tiers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
     margin: 3rem 0;
-    max-width: 1400px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 1400px) {
+    .pricing-tiers {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .pricing-tiers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-tiers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 1rem;
+    }
 }
 
 .pricing-card {
@@ -301,6 +328,7 @@ footer {
     transition: all 0.3s ease;
     position: relative;
     border: 2px solid transparent;
+    min-width: 240px;
 }
 
 .pricing-card:hover {
@@ -505,12 +533,69 @@ footer {
 }
 
 /* Responsive pricing adjustments */
-@media (max-width: 768px) {
-    .pricing-tiers {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin: 2rem 1rem;
-    }
+
+/* Pricing period badges */
+.period-badge {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.period-badge.annual {
+    background: #ffc107;
+    color: #000;
+}
+
+.period-badge.lifetime {
+    background: #6f42c1;
+    color: white;
+}
+
+/* Savings indicator */
+.savings {
+    display: block;
+    font-size: 0.75rem;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Tier grouping */
+.tier-group {
+    display: contents;
+}
+
+.tier-group-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+}
+
+.tier-group-header h3 {
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.tier-group-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
     
     .user-type-buttons {
         flex-direction: column;
