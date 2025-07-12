@@ -171,13 +171,13 @@ export default function Pricing() {
             Pricing
           </h1>
 
-          {/* Pricing Slider */}
-          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scroll-smooth snap-x snap-mandatory">
-            <div className="flex gap-6 px-4 whitespace-nowrap">
+          {/* Pricing Layout - Responsive */}
+          <div className="md:overflow-x-auto md:scrollbar-thin md:scrollbar-thumb-gray-400 md:scroll-smooth md:snap-x md:snap-mandatory">
+            <div className="flex flex-col gap-6 px-4 md:flex-row md:whitespace-nowrap">
               {pricingTiers.map((tier) => (
                 <Card 
                   key={tier.id}
-                  className={`w-[300px] shrink-0 snap-start relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
+                  className={`w-full md:w-[300px] md:shrink-0 md:snap-start relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border ${
                     tier.popular ? 'border-2 border-blue-500 shadow-lg' : 'border-gray-200'
                   } bg-white`}
                   data-plan-id={tier.stripeProductId}
@@ -264,15 +264,15 @@ export default function Pricing() {
               Lifetime Access
             </h2>
             
-            <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scroll-smooth snap-x snap-mandatory">
-              <div className="flex gap-6 px-4 whitespace-nowrap">
+            <div className="md:overflow-x-auto md:scrollbar-thin md:scrollbar-thumb-gray-400 md:scroll-smooth md:snap-x md:snap-mandatory">
+              <div className="flex flex-col gap-6 px-4 md:flex-row md:whitespace-nowrap">
                 {pricingTiers.filter(tier => tier.id !== 'free').map((tier) => {
                   const lifetimePrice = tier.monthlyPrice ? calculateLifetimePrice(tier.monthlyPrice) : null
                   
                   return (
                     <Card 
                       key={`lifetime-${tier.id}`}
-                      className="w-[300px] shrink-0 snap-start relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-200 bg-white"
+                      className="w-full md:w-[300px] md:shrink-0 md:snap-start relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-200 bg-white"
                       data-plan-id={`${tier.stripeProductId}_lifetime`}
                     >
                     {/* Save Badge */}
